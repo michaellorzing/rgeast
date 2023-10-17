@@ -22,11 +22,22 @@ import {
 export const BlogCard = ({ blog }) => {
 	const { title, metaDescription, slug, image, _rawDescription } = blog;
 	return (
-		<Box width={['80%', '100%']} px={2}>
-			<Box borderRadius='lg' overflow='hidden'>
-				<Box textDecoration='none' _hover={{ textDecoration: 'none' }}>
-					<GatsbyImage image={image?.asset.gatsbyImageData} />
-				</Box>
+		<Box
+			width={['100%', '95%']}
+			mx={2}
+			my={[6, 0]}
+			p={[4, 6]}
+			h={{ base: '800px', sm: '700px', md: '850px', lg: '950px', xl: '750px' }}
+			borderColor='gray.200'
+			// border='1px'
+			style={{
+				position: 'relative',
+				boxShadow:
+					'0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3)',
+			}}
+			borderRadius='lg'>
+			<Box borderRadius='lg' overflow='hidden' mb={8}>
+				<GatsbyImage image={image?.asset.gatsbyImageData} />
 			</Box>
 			<Heading fontSize='xl' marginTop='2'>
 				<Text
@@ -36,7 +47,11 @@ export const BlogCard = ({ blog }) => {
 					{title}
 				</Text>
 			</Heading>
-			<Text as='p' fontSize='lg' marginTop='2' color={'gray.500'}>
+			<Text
+				as='p'
+				marginTop='2'
+				fontSize={{ base: 18, sm: 16, md: 16, lg: 18 }}
+				color={'gray.500'}>
 				{metaDescription}
 			</Text>
 			<Link to={`/blog/${slug.current}`}>
@@ -44,7 +59,8 @@ export const BlogCard = ({ blog }) => {
 					bg={'orange.300'}
 					rounded={'full'}
 					color={'white'}
-					style={{ width: '140px', bottom: 0 }}
+					mb={[8, 4]}
+					style={{ width: '140px', bottom: 0, position: 'absolute' }}
 					_hover={{ bg: 'orange.500' }}
 					mt={4}>
 					Read More

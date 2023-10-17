@@ -42,7 +42,7 @@ const Feature = ({ text, icon, iconBg }) => {
 export const AboutUs = ({ header, body, image }) => {
 	return (
 		<Box background='#F6F9FC'>
-			<Container maxW={'8xl'} py={40}>
+			<Container maxW={'8xl'} py={[20, 40]}>
 				<a id='about' />
 				<SimpleGrid columns={{ base: 1, md: 2 }} spacing={14}>
 					<Stack spacing={4}>
