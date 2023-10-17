@@ -22,6 +22,8 @@ import {
 	ChevronDownIcon,
 	ChevronRightIcon,
 } from '@chakra-ui/icons';
+import { MdOutlineConstruction } from 'react-icons/md';
+import { Link } from 'gatsby';
 
 export const Nav = () => {
 	const { isOpen, onToggle } = useDisclosure();
@@ -51,13 +53,21 @@ export const Nav = () => {
 						aria-label={'Toggle Navigation'}
 					/>
 				</Flex>
-				<Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-					<Text
-						textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-						fontFamily={'heading'}
-						color={useColorModeValue('gray.800', 'white')}>
-						Logo
-					</Text>
+				<Flex
+					flex={{ base: 1 }}
+					justify={{ base: 'center', md: 'start' }}
+					align='center'>
+					<Link to='/'>
+						<IconButton
+							aria-label='facebook'
+							variant='ghost'
+							size='lg'
+							isRound={true}
+							color='orange.300'
+							_hover={{ color: 'orange.600' }}
+							icon={<MdOutlineConstruction size='50px' />}
+						/>
+					</Link>
 
 					<Flex display={{ base: 'none', md: 'flex' }} ml={10}>
 						<DesktopNav />
@@ -235,6 +245,6 @@ const NAV_ITEMS = [
 	},
 	{
 		label: 'Blog',
-		href: '/#blogs',
+		href: '/#blog',
 	},
 ];

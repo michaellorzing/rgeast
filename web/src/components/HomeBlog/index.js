@@ -17,6 +17,7 @@ import { BlogCard } from './BlogCard';
 export const HomeBlog = ({ blogs }) => {
 	return (
 		<Container maxW='80vw'>
+			<a id='blog' />
 			<Heading pt={20} textAlign='center' color='#33383B'>
 				Tips For Keeping Your Home Looking Its Best
 			</Heading>
