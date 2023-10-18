@@ -89,7 +89,7 @@ export const ContactUs = () => {
 					boxShadow='dark-lg'
 					m={{ sm: 4, md: 16, lg: 10 }}
 					p={{ sm: 5, md: 5, lg: 16 }}>
-					<Box p={4}>
+					<Box p={{base: 3, md: 3, lg: 1}}>
 						<Wrap
 							spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}
 							display='flex'
@@ -109,17 +109,17 @@ export const ContactUs = () => {
 									<Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
 										<VStack
 											pl={0}
-											spacing={3}
+											spacing={1}
 											alignItems='center'
 											justifyContent='center'>
 											<a href='tel:+6093396985'>
 												<Button
-													size='md'
+													size='lg'
 													height='48px'
 													width='200px'
 													variant='ghost'
 													color='#DCE2FF'
-													style={{ minWidth: '250px' }}
+													style={{ minWidth: '300px' }}
 													_hover={{ border: '2px solid #F6AD55' }}
 													leftIcon={<MdPhone color='F6AD55' size='20px' />}>
 													<Text>(609) 339-6985</Text>
@@ -127,12 +127,12 @@ export const ContactUs = () => {
 											</a>
 											<a href='mailto: rgeconstruction@gmail.com'>
 												<Button
-													size='md'
+													size='lg'
 													height='48px'
 													width='200px'
 													variant='ghost'
 													color='#DCE2FF'
-													style={{ minWidth: '250px' }}
+													style={{ minWidth: '300px' }}
 													_hover={{ border: '2px solid #F6AD55' }}
 													leftIcon={<MdEmail color='#F6AD55' size='20px' />}>
 													<Text>rgeconstruction@gmail.com</Text>
@@ -142,12 +142,12 @@ export const ContactUs = () => {
 												href='https://www.google.com/maps/place/Brick+Township,+NJ/@40.0690972,-74.1882458,12z/data=!3m1!4b1!4m6!3m5!1s0x89c182aa7b13512b:0x8189bef7c0280c6b!8m2!3d40.0578384!4d-74.1371832!16zL20vMHhyOXI?entry=ttu'
 												target='_blank'>
 												<Button
-													size='md'
+													size='lg'
 													height='48px'
 													width='200px'
 													variant='ghost'
 													color='#DCE2FF'
-													style={{ minWidth: '250px' }}
+													style={{ minWidth: '300px' }}
 													_hover={{ border: '2px solid #F6AD55' }}
 													leftIcon={
 														<MdLocationOn color='#F6AD55' size='20px' />
@@ -158,8 +158,8 @@ export const ContactUs = () => {
 										</VStack>
 									</Box>
 									<HStack
-										mt={{ lg: 10, md: 10 }}
-										spacing={5}
+										mt={{ lg: 4, md: 4 }}
+										spacing={3}
 										alignItems='center'
 										justifyContent='center'>
 										<a

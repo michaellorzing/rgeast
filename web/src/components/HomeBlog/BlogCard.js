@@ -37,7 +37,10 @@ export const BlogCard = ({ blog }) => {
 			}}
 			borderRadius='lg'>
 			<Box borderRadius='lg' overflow='hidden' mb={8}>
-				<GatsbyImage image={image?.asset.gatsbyImageData} />
+				<GatsbyImage
+					image={image?.asset.gatsbyImageData}
+					imgStyle={{ objectFit: 'contain' }}
+				/>
 			</Box>
 			<Heading fontSize='xl' marginTop='2'>
 				<Text
