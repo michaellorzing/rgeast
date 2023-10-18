@@ -28,7 +28,13 @@ module.exports = {
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
 		'@chakra-ui/gatsby-plugin',
-		// "gatsby-plugin-google-gtag",
+		{
+			resolve: 'gatsby-plugin-google-tagmanager',
+			options: {
+				id: 'GTM-T7397P5B',
+				enableWebVitalsTracking: true,
+			},
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
