@@ -27,9 +27,9 @@ export const HomeBlog = ({ blogs }) => {
 				pt={10}
 				pb={20}
 				mb={10}
-				justifyContent='center'
-				alignItems='flex-start'
-				columns={[1, 1, 2, 3]}
+				justifyContent='space-evenly'
+				alignItems='center'
+				columns={{ sm: 1, lg: 2, xl: 3 }}
 				gap={6}>
 				{blogs.map((blog, index) => (
 					<BlogCard key={index} blog={blog} />

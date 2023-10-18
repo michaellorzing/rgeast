@@ -7,6 +7,7 @@ import {
 	Heading,
 	Text,
 	Container,
+	Button,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
@@ -117,6 +118,17 @@ export const Projects = ({ projects }) => {
 										lineHeight={1.4}>
 										{p.description}
 									</Text>
+									<a href='#contact'>
+										<Button
+											bg={'orange.300'}
+											rounded={'full'}
+											color={'white'}
+											style={{ width: '140px' }}
+											mt={6}
+											_hover={{ bg: 'orange.500' }}>
+											Learn More
+										</Button>
+									</a>
 								</Box>
 							</Stack>
 						</Container>

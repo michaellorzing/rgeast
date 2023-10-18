@@ -13,6 +13,7 @@ import {
 	Icon,
 	useColorModeValue,
 	Box,
+	Hide,
 } from '@chakra-ui/react';
 import {
 	MdOutlineBathroom,
@@ -42,7 +43,7 @@ const Feature = ({ text, icon, iconBg }) => {
 export const AboutUs = ({ header, body, image }) => {
 	return (
 		<Box background='#F6F9FC'>
-			<Container maxW={'8xl'} py={[20, 40]}>
+			<Container maxW={'8xl'} py={[10, 20, 40]}>
 				<a id='about' />
 				<SimpleGrid columns={{ base: 1, md: 2 }} spacing={14}>
 					<Stack spacing={4}>
@@ -101,16 +102,18 @@ export const AboutUs = ({ header, body, image }) => {
 							/>
 						</Stack>
 					</Stack>
-					<Flex>
-						<GatsbyImage
-							image={image?.asset.gatsbyImageData}
-							style={{
-								borderRadius: '20px',
-								boxShadow:
-									'0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3)',
-							}}
-						/>
-					</Flex>
+					<Hide below='md'>
+						<Flex>
+							<GatsbyImage
+								image={image?.asset.gatsbyImageData}
+								style={{
+									borderRadius: '20px',
+									boxShadow:
+										'0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3)',
+								}}
+							/>
+						</Flex>
+					</Hide>
 				</SimpleGrid>
 			</Container>
 		</Box>

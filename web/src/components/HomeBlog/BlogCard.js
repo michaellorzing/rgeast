@@ -27,7 +27,7 @@ export const BlogCard = ({ blog }) => {
 			mx={2}
 			my={[6, 0]}
 			p={[4, 6]}
-			h={{ base: '800px', sm: '700px', md: '850px', lg: '950px', xl: '750px' }}
+			h={{ base: '800px', sm: '750px', lg: '750px', xl: '780px' }}
 			borderColor='gray.200'
 			// border='1px'
 			style={{
